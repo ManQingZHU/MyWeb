@@ -1,53 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Rumor Refuting Machine</title>
-
+	<title>Rumor Refuting Machine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-.txt{
-	color: white;
-    text-align: center;
-    font-family:Arial;
+* {
+    box-sizing: border-box;
+}
+body {
+	background-color: #4874C2;
+  	margin: auto;
+  	color: white;
+  	text-align: center;
+  	font-family:Trebuchet MS;
+}
+/* Style the header */
+.header {
+    padding: 20px;
 }
 
-#formTxt{
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h4{
 	padding: 5px;
+	width: 70%;
 	margin: auto;
-    width: 80%;
 	border: 1px solid white;
 }
 
-#foot{
-	background-color:#FC0D1B;
+img{
+    width: 50%;
+    height: auto;
+}
+input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+/* Style the footer */
+.footer {
+    background-color: #FC0D1B;
+    padding: 8px;
 }
 
-img{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (max-width:600px) {
+    .column{
+        width: 100%;
+    }
 }
 </style>
-
 </head>
 
-<body style="background-color:#4874C2;">
+<body>
+	<div class="header">
+		<h1>Rumor Refuting Machine</h1>
+	</div>
 
-<h1 class="txt">Rumor Refuting Machine</h1>
-
-<form>
-	<p class="txt" id="formTxt">The rumor you want to discuss about </p>
-	<p><input type="text" name="input1"></p>
-	<p class="txt" id="formTxt">The truth you know behind rumors</p>
-	<p><input type="text" name="input2"></p>
-	<p class="txt" id="formTxt">The rumor you want to check</p>
-	<p><input type="text" name="input2"></p>
-    <p><input type="submit" value="Submit"></p>
-</form>
-
-<img src="image/chisme.jpg" alt="the rumor">
-
-<p class="txt" id="foot">We filter rumors for you.<br>
-Let no rumor exist in the world.</p>
+	<div class="row">
+		<div class="column">
+			<h4>The rumor you want to discuss about</h4>
+			<input type="text" name="input1">
+		</div>
+		<div class="column">
+			<h4>The truth you know behind rumors</h4>
+			<input type="text" name="input2">
+		</div>
+		<div class="column">
+			<h4>The rumor you want to check</h4>
+			<input type="text" name="input3">
+		</div>
+	</div>
+	<div class="row">
+		<div class="column"></div>
+		<div class="column">
+			<img src="image/chisme.jpg" alt="the rumor">
+		</div>
+		<div class="column"></div>
+	</div>
+	<div class="footer">
+		<p>We filter rumors for you.<br>
+		Let no rumor exist in the world.</p>
+	</div>
 </body>
 </html>
